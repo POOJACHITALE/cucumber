@@ -6,7 +6,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import com.NewBellatrix.Base.Browser;
+import com.NewBellatrix.StepDefinations.Browser;
 
 public class Keyword {
 	

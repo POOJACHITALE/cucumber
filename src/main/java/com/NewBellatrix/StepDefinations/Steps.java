@@ -1,5 +1,6 @@
 package com.NewBellatrix.StepDefinations;
 
+import org.apache.log4j.Logger;
 import org.testng.Assert;
 
 import com.NewBellatrix.Pages.CartPage;
@@ -11,6 +12,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class Steps {
+	private static final Logger LOG = Logger.getLogger(HomePage.class);
 	Keyword keyword = new Keyword();
 	HomePage homepage = new HomePage();
 	CartPage cartpage = new CartPage();
@@ -21,11 +23,11 @@ public class Steps {
 		keyword.launchUrl("https://demos.bellatrix.solutions/");
 
 		keyword.maximizeWindow();
-		
+
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
 		}
 	}
@@ -93,24 +95,44 @@ public class Steps {
 			System.out.println("Checking: " + producttitles);
 			String out = producttitles.toLowerCase();
 			Assert.assertTrue(out.contains("falcon"), "");
+			// LOG.info("" + producttitles);
 			break;
 		}
-
+		// LOG.info(""+producttitles);
 	}
-	
+
+	@When("Search for Proton Product")
+	public void search_for_proton_product() {
+		homepage.searchProduct("Proton");
+		LOG.info("Proton product searched");
+	}
+
+	@Then("Verify Proton Product Titles are Displayed")
+	public void verify_proton_product_titles_are_displayed() {
+		homepage.productTitleForProton();
+
+		while (homepage.productTitleForProton().hasNext()) {
+			String producttitles = homepage.productTitleForProton().next().getText();
+			System.out.println("Checking: " + producttitles);
+			String out = producttitles.toLowerCase();
+			Assert.assertTrue(out.contains("proton"), "");
+			break;
+		}
+	}
+
 	@When("Click on Cart")
 	public void click_on_cart() {
-	    cartpage.clickOnCartButton();
+		// driver.switchTo().frame(0);
+		cartpage.clickOnCartButton();
 	}
 
 	@Then("Your cart is currently empty text should get displayed")
 	public void your_cart_is_currently_empty_text_should_get_displayed() {
-	  Assert.assertTrue(cartpage.textForCartEmpty().contains("Your cart is currently empty."));  
+		Assert.assertTrue(cartpage.textForCartEmpty().contains("Your cart is currently empty."));
 	}
-	
-	
+
 	@Then("Product Name text should get displayed")
 	public void product_name_text_should_get_displayed() {
-	  Assert.assertTrue(cartpage.productTextOnCartPage().contains("Product")); 
+		Assert.assertTrue(cartpage.productTextOnCartPage().contains("Product"));
 	}
 }

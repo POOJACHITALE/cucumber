@@ -1,14 +1,17 @@
 package com.NewBellatrix.Pages;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class CartPage {
+
+public class CartPage  {
+	
+	
 	
 	@FindBy(css = "#site-navigation > div:nth-child(2) > ul > li.page_item.page-item-6.current_page_item > a")
 	WebElement CartButton;
 	
 	public void clickOnCartButton() {
+		//ChromeDriver.switchTo().frame(0);
 		CartButton.click();
 	}
 
@@ -26,6 +29,14 @@ public class CartPage {
 	    public String productTextOnCartPage() {
 		String productname = productName.getText();
 		return productname;
+		}
+	    
+	    @FindBy(css = "tr.cart-subtotal>td>span")
+	    WebElement subTotalFalconHeavy;
+	    
+	    public void getSubTotalWhenFalconHeavyAdded() {
+			subTotalFalconHeavy.getText();
+
 		}
 }
 

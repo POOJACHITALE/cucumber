@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="7" passed="6" failed="1" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-11-03T21:08:14 IST" name="Default suite" finished-at="2023-11-03T21:09:44 IST" duration-ms="90190">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.NewBellatrix.Utilities.FeatureRunner@7205765b]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test started-at="2023-11-03T21:08:14 IST" name="Default test" finished-at="2023-11-03T21:09:44 IST" duration-ms="90190">
+      <class name="com.NewBellatrix.Utilities.FeatureRunner">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.NewBellatrix.Utilities.FeatureRunner@7205765b]" started-at="2023-11-03T21:08:14 IST" name="setUpClass" finished-at="2023-11-03T21:08:15 IST" duration-ms="708" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@19c1820d]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.NewBellatrix.Utilities.FeatureRunner@7205765b]" started-at="2023-11-03T21:08:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-03T21:08:32 IST" duration-ms="17255" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify product name text gets displayed after a product to cart"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Cart Testcases"]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebElement.getText()" because "this.productName" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebElement.getText()" because "this.productName" is null
+at com.NewBellatrix.Pages.CartPage.productTextOnCartPage(CartPage.java:30)
+at com.NewBellatrix.StepDefinations.Steps.product_name_text_should_get_displayed(Steps.java:136)
+at ✽.Product Name text should get displayed(file:///C:/Users/welcom/eclipse-workspace/NewBellatrix/src/test/resources/CartFeature.feature:8)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.NewBellatrix.Utilities.FeatureRunner@7205765b]" started-at="2023-11-03T21:08:32 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-03T21:08:45 IST" duration-ms="13447" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search for Falcon product and click on View cart for Falcon Heavy product"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Home Features here"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.NewBellatrix.Utilities.FeatureRunner@7205765b]" started-at="2023-11-03T21:08:45 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-03T21:09:00 IST" duration-ms="15051" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Search for Falcon product and click on View cart for Falcon9 product"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Home Features here"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.NewBellatrix.Utilities.FeatureRunner@7205765b]" started-at="2023-11-03T21:09:00 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-03T21:09:12 IST" duration-ms="11514" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify Product title gets displayed"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Home Features here"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.NewBellatrix.Utilities.FeatureRunner@7205765b]" started-at="2023-11-03T21:09:12 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-03T21:09:24 IST" duration-ms="11542" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify Product title gets displayed"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Home Features here"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.NewBellatrix.Utilities.FeatureRunner@7205765b]" started-at="2023-11-03T21:09:24 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-03T21:09:34 IST" duration-ms="10242" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify Product titles Falcon should get displayed"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Home Features here"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.NewBellatrix.Utilities.FeatureRunner@7205765b]" started-at="2023-11-03T21:09:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2023-11-03T21:09:44 IST" duration-ms="10305" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify Product titles Proton should get displayed"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Home Features here"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.NewBellatrix.Utilities.FeatureRunner@7205765b]" started-at="2023-11-03T21:09:44 IST" name="tearDownClass" finished-at="2023-11-03T21:09:44 IST" duration-ms="8" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+      </class> <!-- com.NewBellatrix.Utilities.FeatureRunner -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
