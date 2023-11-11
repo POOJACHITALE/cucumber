@@ -79,7 +79,7 @@ public class HomePage {
 		String productTitle = productTitleFalcon9.getText();
 		return productTitle;
 	}
-
+     // product titles of falcon
 	@FindBy(css = "h2.woocommerce-loop-product__title")
 	List<WebElement> productTitleFalcon;
 
@@ -88,7 +88,7 @@ public class HomePage {
 		Iterator<WebElement> itr = productTitleFalcon.iterator();
 		return itr;
 	}
-
+     //product titles for proton
 	@FindBy(css = "h2.woocommerce-loop-product__title")
 	List<WebElement> productTitleProton;
 

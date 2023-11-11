@@ -1,5 +1,9 @@
 package com.NewBellatrix.StepDefinations;
 
+import com.NewBellatrix.config.Configuration;
+
+import java.io.FileNotFoundException;
+
 import org.apache.log4j.Logger;
 import org.testng.Assert;
 
@@ -16,11 +20,17 @@ public class Steps {
 	Keyword keyword = new Keyword();
 	HomePage homepage = new HomePage();
 	CartPage cartpage = new CartPage();
+	Configuration config = new Configuration();
 
 	@Given("Open the the app url")
 	public void open_the_the_app_url() {
-
-		keyword.launchUrl("https://demos.bellatrix.solutions/");
+//		try {
+//			config.getAppUrl("app.url");
+//		} catch (FileNotFoundException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+		 keyword.launchUrl("https://demos.bellatrix.solutions/");
 
 		keyword.maximizeWindow();
 
